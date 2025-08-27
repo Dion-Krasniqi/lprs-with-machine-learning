@@ -14,7 +14,6 @@ plate_like_objects = [] # binary image of just the filtered objects
 
 fig, (ax1) = plt.subplots(1)
 ax1.imshow(grayscale.gray_car_image, cmap = "gray")
-
 for region in regionprops(label_image):
     if region.area < 50: # the "iterator" thingy is a connected region from the regions we got earlier, if the number of pixels of the
         continue         # said area has less than 50 pixels, most likely noise/too small, so skip
